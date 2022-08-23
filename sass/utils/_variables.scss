@@ -1,0 +1,19 @@
+    $font-style-roboto: Roboto, sans-serif;
+    $font-style-raleway: Raleway, sans-serif;
+    :root {
+        --primary-text-color:#757575;
+        --title-text-color:#212121;
+        --accent:#2196F3;
+        --background-color-basic:#FFFFFF;
+        --background-color-footer:#2F303A;
+        --background-color-reserve:#F5F4FA;
+        --logo-text-color:#000000;
+        --white-color:#FFFFFF;
+        --wrapper-color:#EEEEEE;
+        --header-border:#ECECEC;
+        --icons-color:#AFB1B8;
+        --indent: 30px;
+        --items: 3;
+        --modal-backdrop-color:rgba(0, 0, 0, 0.2);
+        --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }

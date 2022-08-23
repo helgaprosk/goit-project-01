@@ -1,0 +1,50 @@
+/*logo*/
+.logo {
+    color: var(--accent);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-decoration: none;
+    margin-right: 93px;
+
+    /* значення властивості для якої буде здійснено плавний перехід за заданий час
+            якщо не встановити властивості переходу, то застосується all */
+    transition-property: color;
+
+    /* час за який буде здійсенено перехід від одного значення до іншого */
+    transition-duration: 1s;
+
+    /* функція розподілення часу пропорційно до швидкості переходу стану */
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* затримка перед початком переходу */
+    transition-delay: 0s;
+
+    /* скорочений запис */
+    transition: color var(--animation);
+
+&:hover,
+&:focus {
+    color: var(--logo-text-color);
+}
+
+&--black {
+    color: var(--logo-text-color);
+
+    transition: color var(--animation);
+}
+
+&--white {
+    color: var(--white-color);
+
+    transition: color var(--animation);
+}
+
+&--black:hover,
+&--black:focus,
+&--white:hover,
+&--white:focus {
+    color: var(--accent);
+}
+}

@@ -1,0 +1,317 @@
+.footer {
+    background-color: var(--background-color-footer);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    transition: color var(--animation);
+
+
+&__container {
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+        @include centerdf(flex);
+        flex-wrap: wrap;
+        align-items: baseline;
+
+    }
+
+    @media screen and (min-width:$desktop) {
+        @include df(flex);
+
+        align-items: baseline;
+    }
+}
+}
+.footer-address {
+    @media screen and (min-width: $tablet) {
+        @include centerdf(flex);
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-right: 165px;
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+        margin-right: 70px;
+        flex-direction: column;
+        align-items: baseline;
+        margin-bottom: 0;
+    }
+}
+
+.footer-address__logo {
+    @extend %reset-link;
+    @include fonts(24px, 28px, 700);
+    font-family:'Raleway';
+    color: var(--accent);
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+        @include fonts(26px, 31px, 700);
+    }
+}
+
+.footer-address__list {
+    @extend %reset-list;
+
+    margin: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.footer-address__link--map {
+    @extend %reset-link;
+    @include fonts(14px, 24px);
+    font-style: normal;
+    color: var(--white-color);
+    transition: color var(--animation);
+
+    @media screen and (min-width: $mobile) {
+        display: block;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent);
+    }
+}
+
+.footer-address__link {
+    @extend %reset-link;
+    @include fonts(14px, 24px);
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color var(--animation);
+
+    @media screen and (min-width: $mobile) {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+        justify-content: start;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent);
+    }
+}
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+
+    @media screen and (min-width: $tablet) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+
+        flex-direction: column;
+        align-items: baseline;
+    }
+}
+
+.footer-socials__title {
+    @include fonts(14px, 16px, 700);
+
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    @media screen and (min-width: $mobile) {
+        display: block;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+    }
+}
+
+.footer-socials__list {
+    @extend %reset-list;
+    @include centerdf(flex);
+
+    gap: 10px;
+    margin: 0;
+}
+
+.footer-socials__link {
+    @include centerdf(flex);
+
+    fill: var(--white-color);
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: background-color var(--animation);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent);
+    }
+}
+.footer-form {
+    display: block;
+    
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+
+        width: 570px;
+        margin-left: 93px;
+    }
+
+}
+
+.footer-form__title {
+    @include fonts(14px, 16px, 700);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: var(--white-color);
+    transition: color var(--animation);
+
+
+    @media screen and (min-width: $mobile) {
+        display: block;
+        text-align: center;
+    }
+
+    @media screen and (min-width: $tablet) {
+        @include df(flex);
+        justify-content: center;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+        text-align: left;
+        justify-content: start;
+    }
+}
+
+.footer-form__group {
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+
+        gap: 12px;
+    }
+}
+
+.footer-form__label {
+    position: relative;
+}
+
+.footer-form__input {
+    width: 100%;
+    height: 50px;
+    padding-right: 30px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    color: rgba(255, 255, 255, 0.6);
+
+    &::placeholder {
+        @include fonts(16px, 20px);
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        @include df(flex);
+        width: 358px;
+
+    }
+}
+.footer-form__btn {
+    @include fonts(16px, 30px, 700, 0.06em);
+    //@include button;
+    @include df(flex);
+       
+        margin-top: 20px;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 28px;
+        width: 200px;
+        height: 50px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: var(--accent);
+        color: var(--white-color);
+        border: 1px transparent;
+        
+        transition: box-shadow var(--animation);
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 0;
+    }}

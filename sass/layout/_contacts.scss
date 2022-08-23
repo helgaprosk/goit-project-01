@@ -1,0 +1,90 @@
+.contacts {
+    @media screen and (max-width:767px){
+        display:none;
+    }
+
+    @media screen and (min-width: 768px) {
+            
+    
+        }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+             margin-left: auto;
+             gap: var(--indent);
+    }
+    
+    
+
+/*Contacts icons*/
+    &__link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-text-color);
+    
+            transition: color var(--animation);
+        }
+    
+    &__icon {
+            fill: currentColor;
+            margin-right: 10px;
+        }
+    
+    &__link:hover,
+    &__link:focus {
+            color: var(--accent);
+        }
+.contacts__mail:hover,
+.contacts__mail:focus {
+            color: var(--accent);
+        }
+.contacts__tel:hover,
+.contacts__tel:focus {
+            color: var(--accent);
+        }
+    
+.contacts__tel {
+            color: var(--primary-text-color);
+            @include fonts(14px,16px,500);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+    
+            transition: color var(--animation);
+
+            @media screen and (min-width: $desktop) {
+                    //margin-right: 30px;
+                    margin-bottom: 0;
+                    padding-top: 32px;
+                    padding-bottom: 32px;
+                }
+        }
+    
+.contacts__mail {
+            color: var(--primary-text-color);
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+            text-decoration: none;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+    
+            transition: color var(--animation);
+
+            @media screen and (min-width: $desktop) {
+                //margin-right: 30px;
+                margin-bottom: 0;
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+        }
+    }
+
+
+
